@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Comic Neue", cursive;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 900px;
+  }
+}
+
+caption {
+  margin-bottom: 20px;
+}
+
+table:last-of-type caption {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+table {
+  width: 60%;
+  margin: 20px auto;
+  padding: 0;
+}
+
+table tr {
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+table tr td {
+  padding: 10px;
+}
+
+table tr td:nth-of-type(2) {
+  width: 30%;
+}
+
+table tr td input {
+  font-family: "Comic Neue", cursive;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+table:last-of-type tr {
+  background-color: rgb(1, 164, 170);
+  color: white;
+}
+
+[type="reset"] {
+  display: block;
+  text-transform: capitalize;
+  padding: 10px;
+  background-color: rgb(218, 50, 4);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+[type="reset"]:hover {
+  margin: 7px auto;
+  border: 2px solid rgb(218, 50, 4);
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 766px) {
+  .container {
+    width: 90%;
+    font-size: 16px;
+  }
+  table tr td input {
+    font-family: "Comic Neue", cursive;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 300px) {
+  .container {
+    font-size: 13px;
+  }
+  table tr td input {
+    font-family: "Comic Neue", cursive;
+    font-size: 13px;
+  }
+  table tr td:nth-of-type(2) {
+    width: 40%;
+  }
+}

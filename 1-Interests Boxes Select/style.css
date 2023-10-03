@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+
+:root {
+  --main-purple-color: #5c48f1;
+  --elements-background-color: #eeecfd;
+  --element-border-color: #e0e0e1;
+}
+
+body {
+  font-family: "Comic Neue", cursive;
+}
+
+.container {
+  background-color: #fafafa;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.choose {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: var(--main-purple-color);
+  background-color: var(--elements-background-color);
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.interests .ch {
+  width: calc(25% - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 2px solid var(--element-border-color);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.ch input {
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid #b7b7ba;
+  border-radius: 3px;
+  position: relative;
+}
+
+.ch input:checked {
+  border: 2px solid var(--main-purple-color);
+}
+
+.ch input:checked::after {
+  content: "";
+  width: 70%;
+  height: 70%;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-purple-color);
+}
+
+.ch:hover input {
+  border: 2px solid var(--main-purple-color);
+}
+
+.ch:hover input:not(input:checked)::after {
+  content: "";
+  width: 70%;
+  height: 70%;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #cec8fb;
+}
+
+.ch span {
+  font-size: 70px;
+  color: var(--main-purple-color);
+}
+
+.ch label {
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ch:has(input:checked) {
+  border: 2px solid var(--main-purple-color);
+  background-color: var(--elements-background-color);
+}
+
+@media (max-width: 767px) {
+  .interests .ch {
+    width: calc(50% - 5px);
+  }
+  .interests .ch {
+    height: 150px;
+  }
+  .ch span {
+    font-size: 70px;
+  }
+
+  .ch label {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .interests .ch {
+    height: 150px;
+  }
+  .ch span {
+    font-size: 70px;
+  }
+
+  .ch label {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .interests .ch {
+    height: 200px;
+  }
+
+  .ch span {
+    font-size: 85px;
+  }
+
+  .ch label {
+    font-size: 20px;
+  }
+
+  .ch input {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .interests .ch {
+    height: 220px;
+  }
+
+  .ch span {
+    font-size: 100px;
+  }
+
+  .ch label {
+    font-size: 26px;
+  }
+
+  .ch input {
+    width: 30px;
+    height: 30px;
+  }
+}
